@@ -1,10 +1,15 @@
 using System.Diagnostics;
 using System.IO;
 
-namespace Zavolokas
+namespace Zavolokas.Utils.Processes
 {
-    public static class MiscExtensions
+    public static class FilesExtensions
     {
+        /// <summary>
+        /// Executes the file.
+        /// </summary>
+        /// <param name="fileInfo">The file information.</param>
+        /// <exception cref="FileNotFoundException"></exception>
         public static void ShowFile(this FileInfo fileInfo)
         {
             if (!fileInfo.Exists)
