@@ -15,7 +15,7 @@ namespace Zavolokas.Utils.Processes
             if (!fileInfo.Exists)
                 throw new FileNotFoundException($"File \"{fileInfo.Name}\" doesn't exist.", fileInfo.FullName);
 
-            Process.Start(fileInfo.FullName);
+            Process.Start(new ProcessStartInfo("cmd", $"/c start {fileInfo.FullName}"));
         }
     }
 }
